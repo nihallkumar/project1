@@ -3,32 +3,11 @@
     <div class="btn btn-success">New Recipe</div>
   </div>
 </div>
+
 <hr>
+
 <div class="row">
   <div class="col-md-12">
-
-    <!-- <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes">
-      <div class="float-left">
-        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
-        <p class="list-group-item-text">{{recipe.desc}}</p>
-      </div>
-      <span class="float-right">
-        <img src="{{recipe.imgPath}}" [src]="recipe.imgPath" alt="{{recipe.name}}" class="img-responsive"
-          style="max-height: 50px;">
-      </span>
-    </a> -->
-
-    <a href="#" class="list-group-item d-flex" *ngFor="let recipe of recipes">
-      <div class="ms-2 me-auto">
-        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
-        <p class="list-group-item-text">{{recipe.desc}}</p>
-      </div>
-      <span class="">
-        <img src="{{recipe.imgPath}}" [src]="recipe.imgPath" alt="{{recipe.name}}" class="img-responsive" style="max-height: 50px;">
-      </span>
-    </a>
-
-    <app-recipe-item></app-recipe-item>
-
+    <app-recipe-item *ngFor="let recipeEL of recipes" [recipe]="recipeEL" (recipeSelected)="onRecipeSelected(recipeEL)"></app-recipe-item>
   </div>
 </div>
