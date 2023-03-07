@@ -1,9 +1,9 @@
-<a (click)="onSelect()" href="#" class="list-group-item d-flex">
-  <div class="ms-2 me-auto">
+<a (click)="onSelect()" href="#" class="list-group-item clearfix">
+  <div class="pull-left">
     <h4 class="list-group-item-heading">{{recipe.name}}</h4>
     <p class="list-group-item-text">{{recipe.desc}}</p>
   </div>
-  <span class="">
+  <span class="pull-right">
     <img src="{{recipe. imgPath}}" [src]="recipe.imgPath" alt="{{recipe.name}}" class="img-responsive"
       style="max-height: 50px;">
   </span>
