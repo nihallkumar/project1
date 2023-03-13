@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 import { DropdownDirective } from './MyComponents/shared/dropdown.directive';
 import { ShoppingListService } from './MyComponents/shopping-list/shoppingList.service';
 import { AppRoutingModule } from './app-routing.module';
-import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeStartComponent } from './MyComponents/recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './MyComponents/recipes/recipe-edit/recipe-edit.component';
 
 
