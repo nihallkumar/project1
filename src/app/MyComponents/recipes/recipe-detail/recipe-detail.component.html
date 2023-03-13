@@ -17,9 +17,9 @@
       <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1">
         Manage recipe <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" appDropdown>
+      <ul style="cursor: pointer;" class="dropdown-menu" aria-labelledby="dropdownMenuButton1" appDropdown>
         <li><a (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</a></li>
-        <li><a>Edit Recipe</a></li>
+        <li><a (click)="onEditRecipe()">Edit Recipe</a></li>
         <li><a>Delete Recipe List</a></li>
       </ul>
     </div>

@@ -6,9 +6,12 @@
   </div>
 
   <div class="col-md-7">
-    <app-recipe-detail *ngIf="SelectedRecipe; else infoText" [recipe]="SelectedRecipe"></app-recipe-detail>
+
+    <!-- <app-recipe-detail *ngIf="SelectedRecipe; else infoText" [recipe]="SelectedRecipe"></app-recipe-detail>
       <ng-template #infoText>
         <p>Plese select a Recipe!</p>
-      </ng-template>
+      </ng-template> -->
+
+    <router-outlet></router-outlet>
   </div>
 </div>

@@ -7,10 +7,10 @@ import { Recipe } from './MyComponents/recipes/recipe.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project1';
-  loadedFeature ='recipe';
+  // title = 'Recipe-Book';
+  // loadedFeature ='recipe';
 
-  onNavigate(feature:string){
-    this.loadedFeature=feature;
-  }
+  // onNavigate(feature:string){
+  //   this.loadedFeature=feature;
+  // }
 }
