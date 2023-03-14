@@ -20,4 +20,8 @@ export class RecipeItemComponent {
   //   // this.recipeSelected.emit();
   //   this.recipeService.recipeSelected.emit(this.recipe);
   // }
+
+  // onSelect(){
+  //   console.log(this.recipe);
+  // }
 }
