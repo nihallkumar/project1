@@ -2,7 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/cor
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './MyComponents/header/header.component';
@@ -18,6 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './MyComponents/recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './MyComponents/recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './MyComponents/recipes/recipe.service';
+import { AuthComponent } from './MyComponents/auth/auth.component';
+import { LoadingSpinnerComponent } from './MyComponents/shared/loading-spinner/loading-spinner.component';
+import { AuthInterceptorService } from './MyComponents/auth/auth-interceptor.service';
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { RecipeService } from './MyComponents/recipes/recipe.service';
     ShoppingEditComponent,
     DropdownDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,15 @@ import { RecipeService } from './MyComponents/recipes/recipe.service';
     AppRoutingModule
   ],
   exports: [ShoppingListComponent],
-  providers: [ShoppingListService,RecipeService],
+  providers: [
+    ShoppingListService,
+    RecipeService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
