@@ -26,15 +26,7 @@ import { RecipesComponent } from "./recipes.component";
     ReactiveFormsModule,
     RecipesRoutingModule,
     SharedModule
-  ],
-  // exports: [
-  //   RecipesComponent,
-  //   RecipeListComponent,
-  //   RecipeDetailComponent,
-  //   RecipeStartComponent,
-  //   RecipeItemComponent,
-  //   RecipeEditComponent,
-  // ]
+  ]
 })
 export class RecipesModule {
 
