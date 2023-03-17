@@ -21,6 +21,8 @@ import { RecipeService } from './MyComponents/recipes/recipe.service';
 import { AuthComponent } from './MyComponents/auth/auth.component';
 import { LoadingSpinnerComponent } from './MyComponents/shared/loading-spinner/loading-spinner.component';
 import { AuthInterceptorService } from './MyComponents/auth/auth-interceptor.service';
+import { AlertComponent } from './MyComponents/shared/alert/alert.component';
+import { PlaceholderDirective } from './MyComponents/shared/placeholder/placeholder.directive';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { AuthInterceptorService } from './MyComponents/auth/auth-interceptor.ser
     RecipeStartComponent,
     RecipeEditComponent,
     AuthComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    AlertComponent,
+    PlaceholderDirective
   ],
   imports: [
     BrowserModule,
@@ -61,6 +65,7 @@ import { AuthInterceptorService } from './MyComponents/auth/auth-interceptor.ser
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
-  ]
+  ],
+  entryComponents:[AlertComponent]
 })
 export class AppModule { }
